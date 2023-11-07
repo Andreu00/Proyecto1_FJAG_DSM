@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <catalog>
    <book id="bk101">
-      <author>Gambardella, Matthew</author>
+      <author>Gambardella</author>
       <title>XML Developer's Guide</title>
       <genre>Computer</genre>
       <price>44.95</price>
@@ -51,7 +51,7 @@
       Oberon's Legacy.</description>
    </book>
    <book id="bk106">
-      <author>Randall, Cynthia</author>
+      <author>Cynthia</author>
       <title>Lover Birds</title>
       <genre>Romance</genre>
       <price>4.95</price>
@@ -60,7 +60,7 @@
       conference, tempers fly as feathers get ruffled.</description>
    </book>
    <book id="bk107">
-      <author>Thurman, Paula</author>
+      <author>Paula</author>
       <title>Splish Splash</title>
       <genre>Romance</genre>
       <price>4.95</price>
@@ -89,7 +89,7 @@
    </book>
    <book id="bk110">
       <author>O'Brien, Tim</author>
-      <title>Microsoft .NET: The Programming Bible</title>
+      <title>Microsoft .NET</title>
       <genre>Computer</genre>
       <price>36.95</price>
       <publish_date>2000-12-09</publish_date>
@@ -98,7 +98,7 @@
    </book>
    <book id="bk111">
       <author>O'Brien, Tim</author>
-      <title>MSXML3: A Comprehensive Guide</title>
+      <title>A Comprehensive Guide</title>
       <genre>Computer</genre>
       <price>36.95</price>
       <publish_date>2000-12-01</publish_date>
@@ -108,7 +108,7 @@
    </book>
    <book id="bk112">
       <author>Galos, Mike</author>
-      <title>Visual Studio 7: A Comprehensive Guide</title>
+      <title>Visual Studio 7</title>
       <genre>Computer</genre>
       <price>49.95</price>
       <publish_date>2001-04-16</publish_date>
