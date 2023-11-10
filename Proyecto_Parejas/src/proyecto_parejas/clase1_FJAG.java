@@ -113,7 +113,7 @@ public class clase1_FJAG {
 
             nLibro.appendChild(documento.createTextNode("\n"));//para insertar saltos de línea
 
-            Node raiz = doc.getFirstChild();//tb. doc.getChildNodes().item(0)
+            Node raiz = documento.getFirstChild();//tb. doc.getChildNodes().item(0)
             raiz.appendChild(nLibro);
             System.out.println("Libro insertado en DOM.");
             return 0;
