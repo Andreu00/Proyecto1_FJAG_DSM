@@ -91,5 +91,38 @@ public class clase1_FJAG {
         }
     }
     
+    public int insertarLibroEnDOM(String titulo, String autor, String fecha) {
+        try {
+            System.out.println("Añadir libro al árbol DOM:" + titulo + ";" + autor + ";" + fecha);
+            //crea los nodos=>los añade al padre desde las hojas a la raíz
+            //CREATE TITULO con el texto en medio
+            Node ntitulo = documento.createElement("Titulo");//crea etiquetas <Titulo>...</Titulo>
+            Node ntitulo_text = documento.createTextNode(titulo);//crea el nodo texto para el Titulo
+            ntitulo.appendChild(ntitulo_text);//añade el titulo a las etiquetas=><Titulo>titulo</Titulo>
+            //Node nautor=doc.createElement("Autor").appendChild(doc.createTextNode(autor));//one line doesn't work
+            //CREA AUTOR
+            Node nautor = documento.createElement("Autor");
+            Node nautor_text = documento.createTextNode(autor);
+            nautor.appendChild(nautor_text);
+            //CREA LIBRO, con atributo y nodos Título y Autor 
+            Node nLibro = documento.createElement("Libro");
+            ((Element) nLibro).setAttribute("publicado", fecha);
+            nLibro.appendChild(ntitulo);
+            nLibro.appendChild(nautor);
+            //APPEND LIBRO TO THE ROOT
+
+            nLibro.appendChild(documento.createTextNode("\n"));//para insertar saltos de línea
+
+            Node raiz = doc.getFirstChild();//tb. doc.getChildNodes().item(0)
+            raiz.appendChild(nLibro);
+            System.out.println("Libro insertado en DOM.");
+            return 0;
+            
+        } catch (Exception e) {
+            System.out.println(e);
+            return -1;
+        }
+    }
+    
     
 }
