@@ -1,5 +1,12 @@
 package proyecto_parejas;
 
+import java.io.File;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -46,6 +53,23 @@ public class clase2_DSM {
         return -1;
     }
 }
+    public void guardarEnOtroArchivo(String nuevoArchivo) {
+try {
+Source src = new DOMSource(documento); // Definimos el origen
+StreamResult rst = new StreamResult(new File(nuevoArchivo)); // Definimos el resultado
+
+// Declaramos el Transformer que tiene el método .transform() que necesitamos.
+
+Transformer transformer = TransformerFactory.newInstance().newTransformer();
+// Opción para indentar el archivo
+transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+transformer.transform(src, (javax.xml.transform.Result) rst);
+System.out.println("Archivo creado del DOM con éxito");
+}
+catch (Exception e) {
+e.printStackTrace();
+}
+    }
 }
 
     
